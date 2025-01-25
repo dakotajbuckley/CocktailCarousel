@@ -28,9 +28,17 @@
 
 function moveElements() {
     let displayContainer = document.querySelector('.drinkDisplayContainer')
-    // let display1 = document.querySelector('#drinkDisplay1')
-    // let display2 = document.querySelector('#drinkDisplay2')
-    // let display3 = document.querySelector('#drinkDisplay3')
-    console.log(displayContainer.lastChild)
-    displayContainer.prepend(document.querySelector('.drinkDisplayContainer > *:last-child'))
+    let lastChild = document.querySelector('.drinkDisplayContainer > *:last-child')
+    let image = document.querySelector('.drinkDisplayContainer > *:last-child > img')
+    lastChild.style.display = 'none'
+    // fetch('https://www.thecocktaildb.com/api/json/v1/1/random.php')
+    // .then(res => res.json())
+    // .then(data => image.src = data.drinks[0].strDrinkThumb)
+    displayContainer.prepend(lastChild)
+    lastChild.style.display = 'block'
+    
+
+
+
+    setTimeout(moveElements, 5000)
 }
