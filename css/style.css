@@ -11,7 +11,20 @@
 /* LAYOUT
 /*******************************************/
 
+main {
+  margin-top: 20px;
+  border: 2px solid black;
+  border-radius: 5px;
+}
 
+h1 {
+  text-align: center;
+}
+
+.drinkDisplayContainer {
+  display: flex;
+  justify-content: space-around;
+}
 
 /******************************************
 /* ADDITIONAL STYLES
